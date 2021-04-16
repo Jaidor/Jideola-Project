@@ -18,6 +18,9 @@ $data = bin2hex($data);
 
 Bin2hex data will be passed to req : 7b22757365726e616d65223a2244617669646f222c2270617373776f7264223a225177657274793132333435212121227d
 
+For logout endpoit, it requires hearder to be passed as x-progress then value will be the token sent from login.
+For example : x-progress : 4f6c7155b49a55c39a0e36a537f64d84
+
 
 
 Endpoints : 
