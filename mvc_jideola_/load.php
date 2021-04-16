@@ -2,6 +2,12 @@
 set_time_limit(120);
 ob_end_clean();
 
+$header =  apache_request_headers();
+$session =  (isset($header['x-progress']))? $header['x-progress'] : '';
+
+/* Set session  */
+$jideola->setSessionID($session);
+
 $request_link = $_SERVER['REQUEST_URI'];
 $request_link = explode('/',$request_link);
 unset($request_link[0]);

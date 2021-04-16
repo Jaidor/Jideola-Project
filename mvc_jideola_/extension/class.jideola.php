@@ -12,6 +12,7 @@ class jideolaFunctions{
 	public $DB_PREFIX; /* Database table prefix */
 	public $DB_TYPE;
 	public $debug = false;
+	private $sessionId;
 	
 
    function __construct($param = array())
@@ -40,6 +41,24 @@ class jideolaFunctions{
 		} else {
 			$siteip .= $_SERVER["SERVER_NAME"].'/';
 		}
+    }
+
+	public function setSessionID($data)
+    {
+        $this->sessionId = $data;
+    }
+
+    public function getSessionID()
+    {
+        return $this->sessionId;
+    }
+
+	function destroy($token){
+       /* Session destroy */
+        if($token){
+            $query = "delete from #__sessions where session_id = '$token' ";
+            $this->dbquery($query);
+        }
     }
 
 
