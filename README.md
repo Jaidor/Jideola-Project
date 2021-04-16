@@ -2,7 +2,7 @@
 
 Once the repo is been Clone and migrated to localhost, it has to be kept inside a folder called projects in your localhost...
 
-This project is based on Register, Login & Logout. endpoints
+This project is based on Register, Login & Logout endpoints
 Also you will need to download the sql database to test.
 
 To test Register and login data, you will need to json encode array data and bin2hex.
@@ -11,7 +11,7 @@ Example :
 
 $data = json_encode(array(
     'username'=>'Davido',
-    'password'=>'Qwerty12345!!!'
+    'password'=>'Ry634373!!'
 ));
 $data = bin2hex($data);
 
