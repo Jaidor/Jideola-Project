@@ -7,6 +7,6 @@ Also you will need to download the sql database to test.
 
 Endpoints : 
 
-http://localhost/projects/index.php/api/v1/register
-http://localhost/projects/index.php/api/v1/login
+http://localhost/projects/index.php/api/v1/register <br/>
+http://localhost/projects/index.php/api/v1/login <br/>
 http://localhost/projects/index.php/api/v1/logout
