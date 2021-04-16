@@ -1,0 +1,27 @@
+RewriteEngine on
+# Prevents directory listing
+Options -Indexes
+IndexIgnore *
+#
+#
+AddDefaultCharset UTF-8
+#
+#
+#
+<Files php_errors.log>
+ Order allow,deny
+ Deny from all
+ Satisfy All
+</Files>
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+#
+#
+#
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?querystring=$1
+#
+#
